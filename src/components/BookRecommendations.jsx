@@ -8,12 +8,17 @@ const BookRecommendations = () => {
   const [books, setBooks] = useState(bookData);
   const [newGenre, setNewGenre] = useState("");
   const [newRecommendations, setNewRecommendations] = useState([]);
-
+  
   
   // SUGGESTED TODOS:
   // TODO: Implement state for selected genre and recommendations
   // TODO: Implement state for recommendations
   // TODO: Implement the handleGenreSelect function
+const handleGenreSelect = (genre) => {
+  const bookChoice = bookData[genre];
+  setNewRecommendations(bookSelection);
+  setNewGenre(genre);
+}
 
   return (
     <div className="book-recommendation-engine">
