@@ -6,7 +6,10 @@ import bookData from "../books.json";
 const BookRecommendations = () => {
   // State for all book data
   const [books, setBooks] = useState(bookData);
+  const [newGenre, setNewGenre] = useState("");
+  const [newRecommendations, setNewRecommendations] = useState([]);
 
+  
   // SUGGESTED TODOS:
   // TODO: Implement state for selected genre and recommendations
   // TODO: Implement state for recommendations
@@ -17,6 +20,7 @@ const BookRecommendations = () => {
       <h2>Book Recommendation Engine</h2>
       <div className="genre-buttons">
         {/* TODO: Map over genres and create buttons */}
+        {Object.keys(books).map(genre => {return <button>{genre}</button>})}
       </div>
       <div>
         <h3>Recommendations:</h3>
