@@ -32,22 +32,22 @@ const handleGenreSelect = (genre) => {
             {genre}
         </button>})}
       </div>
-      <div>
-        <h3>Recommendations:</h3>
+      <div >
+        <h3>Recommendations for {newGenre}:</h3>
         {/* TODO: Display recommendations based on selected genre */}
-        {newRecommendations.length > 0 &&  
-          <ul>
-            {newRecommendations.map((bookTitles, index) => (
-             <li key = {index}>
-              {bookTitles}
-             </li> 
+        {newRecommendations.length > 0 ? (
+          <ul className="book-list" >
+            {newRecommendations.map((bookTitle, index) => (
+              <li key={index}>{bookTitle}</li>
             ))}
           </ul>
-         (<p>Choose A Genre</p>
+        ):( <p>choose a genre.</p>
         )}
       </div>
-    </div>
+      </div>
   )
-};
+      };
 
-export default BookRecommendations;
+      export default BookRecommendations;
+
+
